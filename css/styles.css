@@ -1,15 +1,18 @@
 /* =========================================
-   LYRA STUDIO — Main Stylesheet
+   ROSALIND STUDIO — Main Stylesheet
    ========================================= */
 
 /* --- Variables --- */
 :root {
   --cream:       #FAF0D2;  /* warm butter — Barcelona wall light */
-  --terracotta:  #F0116E;  /* hot pink / bougainvillea */
+  --pink:        #F0116E;  /* hot pink / bougainvillea */
+  --terracotta:  #F0116E;  /* alias kept for button compatibility */
   --cobalt:      #1B3B8A;  /* Barcelona shutter blue */
   --gold:        #FFB700;  /* electric saffron */
   --rouge:       #D41420;  /* vivid red */
   --amber:       #C07218;  /* warm ochre — Mediterranean sunlight */
+  --emerald:     #0A7A5A;  /* deep forest green */
+  --teal:        #0A6A8A;  /* bay blue-green */
   --sage:        #5A6B2F;
   --charcoal:    #1C1410;
   --white:       #FFFFFF;
@@ -136,6 +139,25 @@ h1, h2, h3, h4 {
   box-shadow: 0 8px 24px rgba(27, 59, 138, 0.3);
 }
 
+.btn--emerald {
+  background: var(--emerald);
+  color: var(--white);
+  border: 2px solid var(--emerald);
+}
+.btn--emerald:hover {
+  background: #086048;
+  border-color: #086048;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(10, 122, 90, 0.32);
+}
+
+/* --- Colored tag variants --- */
+.tag--cobalt  { color: var(--cobalt)  !important; background: rgba(27, 59, 138, 0.1)  !important; }
+.tag--emerald { color: var(--emerald) !important; background: rgba(10, 122, 90, 0.1)  !important; }
+.tag--teal    { color: var(--teal)    !important; background: rgba(10, 106, 138, 0.1) !important; }
+.tag--amber   { color: var(--amber)   !important; background: rgba(192, 114, 24, 0.12)!important; }
+.tag--rouge   { color: var(--rouge)   !important; background: rgba(212, 20, 32, 0.1)  !important; }
+
 /* =========================================
    NAVIGATION
    ========================================= */
@@ -244,9 +266,10 @@ h1, h2, h3, h4 {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 55% 65% at 80% 45%, rgba(240, 17, 110, 0.3) 0%, transparent 60%),
-    radial-gradient(ellipse 35% 45% at 10% 80%, rgba(212, 20, 32, 0.2) 0%, transparent 55%),
-    radial-gradient(ellipse 45% 55% at 95% 15%, rgba(192, 114, 24, 0.25) 0%, transparent 55%);
+    radial-gradient(ellipse 50% 60% at 82% 42%, rgba(240, 17, 110, 0.32) 0%, transparent 58%),
+    radial-gradient(ellipse 35% 45% at 8%  78%, rgba(10, 106, 138, 0.35) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 50% at 92% 12%, rgba(192, 114, 24, 0.28) 0%, transparent 52%),
+    radial-gradient(ellipse 30% 40% at 55% 88%, rgba(10, 122, 90, 0.3)  0%, transparent 55%);
 }
 
 /* Decorative tile grid texture */
@@ -449,46 +472,51 @@ h1, h2, h3, h4 {
   background:
     linear-gradient(180deg, #1B3B8A 0%, #2a5298 35%, #4a9eda 55%, rgba(74,158,218,0.7) 60%, #3a7a9a 65%, #1B3B8A 100%);
 }
-/* card--4: Great Blue Heron (blue-grey silhouette) */
+/* card--4: Great Blue Heron (dawn water mist) */
 .card__image--4 {
   background:
-    radial-gradient(ellipse 18px 60px at 50% 55%, #4a6080 0%, #3a5070 30%, transparent 65%),
-    radial-gradient(ellipse 12px 12px at 50% 30%, #3a5070 0%, transparent 80%),
-    linear-gradient(180deg, #87CEEB 0%, #b0d8ea 40%, #d4eaf5 60%, #e8f4fa 100%);
+    radial-gradient(ellipse 18px 65px at 50% 55%, #3a5070 0%, #2a3d58 30%, transparent 62%),
+    radial-gradient(ellipse 12px 14px at 50% 29%, #2a3d58 0%, transparent 80%),
+    radial-gradient(ellipse 120% 40% at 50% 100%, rgba(10,106,138,0.6) 0%, transparent 60%),
+    linear-gradient(180deg, #b8d8e8 0%, #7ab8d4 35%, #4a9eba 55%, #0A6A8A 85%, #07516a 100%);
 }
-/* card--5: Pelican (white bird on pink/sunset) */
+/* card--5: Pelican (pink/gold Bay Area sunset) */
 .card__image--5 {
   background:
-    radial-gradient(ellipse 50px 40px at 50% 45%, rgba(255,255,255,0.95) 0%, rgba(240,240,255,0.6) 60%, transparent 80%),
-    linear-gradient(160deg, #F0116E 0%, #E8B93E 45%, #D41420 100%);
+    radial-gradient(ellipse 55px 45px at 50% 40%, rgba(255,255,255,0.95) 0%, rgba(255,240,220,0.5) 60%, transparent 78%),
+    radial-gradient(ellipse 80% 30% at 50% 100%, rgba(212,20,32,0.4) 0%, transparent 60%),
+    linear-gradient(160deg, #F0116E 0%, #FFB700 42%, #D41420 100%);
 }
-/* card--6: Snowy Egret (white on green marsh) */
+/* card--6: Snowy Egret (vivid marsh greens) */
 .card__image--6 {
   background:
-    radial-gradient(ellipse 25px 70px at 50% 50%, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.6) 40%, transparent 70%),
-    linear-gradient(180deg, #87CEEB 0%, #a8d8b0 35%, #5A6B2F 65%, #3d4f22 100%);
+    radial-gradient(ellipse 22px 72px at 50% 48%, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.55) 42%, transparent 68%),
+    radial-gradient(ellipse 80% 35% at 50% 100%, rgba(10,122,90,0.7) 0%, transparent 60%),
+    linear-gradient(180deg, #87CEEB 0%, #60b09a 30%, #0A7A5A 58%, #075c42 80%, #053d2c 100%);
 }
-/* card--7: American Coot (dark bird, blue water) */
+/* card--7: American Coot (teal-blue water pop) */
 .card__image--7 {
   background:
-    radial-gradient(circle 30px at 50% 50%, #1a1a2a 0%, #2a2a3a 40%, transparent 70%),
-    radial-gradient(circle 10px at 50% 38%, rgba(255,255,255,0.9) 0%, transparent 80%),
-    linear-gradient(180deg, #1B3B8A 0%, #2a5298 40%, #4a9eda 70%, #87CEEB 100%);
+    radial-gradient(circle 32px at 50% 48%, #111 0%, #222 42%, transparent 68%),
+    radial-gradient(circle 10px at 50% 34%, rgba(255,255,255,0.92) 0%, transparent 80%),
+    radial-gradient(ellipse 100% 40% at 50% 100%, rgba(10,122,90,0.5) 0%, transparent 55%),
+    linear-gradient(180deg, #0A6A8A 0%, #1580a8 32%, #35a0c8 58%, #70c8e0 80%, #a8e0f0 100%);
 }
-/* card--8: Cormorant (dark bird, wings spread) */
+/* card--8: Cormorant (wings spread, sunset drama) */
 .card__image--8 {
   background:
-    radial-gradient(ellipse 60px 40px at 50% 45%, #111 0%, #222 40%, transparent 70%),
-    radial-gradient(ellipse 90px 25px at 35% 50%, #1a1a1a 0%, transparent 70%),
-    radial-gradient(ellipse 90px 25px at 65% 50%, #1a1a1a 0%, transparent 70%),
-    linear-gradient(180deg, #F0116E 0%, #D41420 30%, #7a1a20 55%, #1B3B8A 100%);
+    radial-gradient(ellipse 62px 42px at 50% 44%, #0d0d14 0%, #1a1a28 42%, transparent 68%),
+    radial-gradient(ellipse 92px 26px at 34% 50%, #111118 0%, transparent 68%),
+    radial-gradient(ellipse 92px 26px at 66% 50%, #111118 0%, transparent 68%),
+    linear-gradient(180deg, #F0116E 0%, #D41420 28%, #6a1018 52%, #1B3B8A 78%, #0d2260 100%);
 }
-/* card--9: Grebe (checkered/spotted pattern) */
+/* card--9: Pied-billed Grebe (lake still water) */
 .card__image--9 {
   background:
-    radial-gradient(circle 25px at 50% 42%, rgba(255,255,255,0.85) 0%, transparent 70%),
-    radial-gradient(circle 35px at 50% 55%, #3a2a18 0%, transparent 70%),
-    linear-gradient(180deg, #1B3B8A 0%, #1e3f80 40%, #87CEEB 65%, #b0d8ea 100%);
+    radial-gradient(circle 26px at 50% 40%, rgba(255,255,255,0.88) 0%, transparent 68%),
+    radial-gradient(circle 36px at 50% 53%, #2a1e14 0%, transparent 68%),
+    radial-gradient(ellipse 100% 35% at 50% 100%, rgba(10,106,138,0.5) 0%, transparent 55%),
+    linear-gradient(180deg, #1B3B8A 0%, #1a4a8a 35%, #2a6aaa 55%, #50a0c8 75%, #90d0e8 100%);
 }
 
 /* SF Weather Cards */
@@ -610,9 +638,10 @@ h1, h2, h3, h4 {
   inset: 0;
   border-radius: 8px;
   background:
-    radial-gradient(circle 110px at 35% 35%, rgba(240, 17, 110, 0.7) 0%, transparent 60%),
-    radial-gradient(circle 90px at 70% 65%, rgba(255, 183, 0, 0.55) 0%, transparent 60%),
-    radial-gradient(circle 70px at 18% 70%, rgba(27, 59, 138, 0.8) 0%, transparent 60%),
+    radial-gradient(circle 100px at 30% 30%, rgba(240, 17, 110, 0.72) 0%, transparent 58%),
+    radial-gradient(circle 85px  at 72% 62%, rgba(255, 183, 0, 0.6)   0%, transparent 58%),
+    radial-gradient(circle 75px  at 18% 72%, rgba(10, 122, 90, 0.7)   0%, transparent 58%),
+    radial-gradient(circle 60px  at 68% 28%, rgba(10, 106, 138, 0.65) 0%, transparent 58%),
     linear-gradient(135deg, #0d1a3a 0%, #1B3B8A 55%, #0a142a 100%);
   overflow: hidden;
 }
@@ -940,9 +969,50 @@ h1, h2, h3, h4 {
   background: rgba(255,255,255,0.06);
   border-radius: 8px;
   border: 1px solid rgba(255,255,255,0.1);
-  transition: background var(--transition);
+  border-top: 3px solid rgba(255,255,255,0.15);
+  transition: background var(--transition), border-top-color var(--transition);
 }
 .value-card:hover { background: rgba(255,255,255,0.1); }
+.value-card:nth-child(1) { border-top-color: var(--pink); }
+.value-card:nth-child(1):hover { border-top-color: var(--pink); }
+.value-card:nth-child(2) { border-top-color: var(--gold); }
+.value-card:nth-child(2):hover { border-top-color: var(--gold); }
+.value-card:nth-child(3) { border-top-color: #3de8b8; }  /* bright mint */
+.value-card:nth-child(3):hover { border-top-color: #3de8b8; }
+.value-card:nth-child(4) { border-top-color: var(--teal); }
+.value-card:nth-child(4):hover { border-top-color: var(--teal); }
+
+/* --- Emerald studio band --- */
+.studio-band {
+  background: var(--emerald);
+  padding: 3rem 0;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+.studio-band::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 40% 100% at 15% 50%, rgba(255,255,255,0.06) 0%, transparent 65%),
+    radial-gradient(ellipse 40% 100% at 85% 50%, rgba(10,106,138,0.25) 0%, transparent 65%);
+}
+.studio-band__quote {
+  position: relative;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  color: var(--white);
+  max-width: 680px;
+  margin-inline: auto;
+  padding-inline: 2rem;
+  line-height: 1.4;
+}
+.studio-band__quote em {
+  color: var(--gold);
+  font-style: normal;
+}
 
 .value-card__icon {
   font-size: 2rem;
