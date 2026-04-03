@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalog — Pétale Studio</title>
+  <meta name="description" content="Browse our full design catalog — stickers, souvenirs, postcards, and custom orders.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav__logo">Pétale<span>Studio</span></a>
+    <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="index.html" class="nav__link">Home</a></li>
+      <li><a href="catalog.html" class="nav__link active">Catalog</a></li>
+      <li><a href="about.html" class="nav__link">About</a></li>
+      <li><a href="contact.html" class="nav__link cta">Order Now</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <header class="page-hero page-hero--cobalt">
+    <span class="section__label">Design Catalog</span>
+    <h1 class="page-hero__title">Every piece,<br><em>a tiny artwork</em></h1>
+    <p>Browse our full collection of stickers, souvenirs, postcards, and custom pieces. See something you love? Get in touch to order.</p>
+  </header>
+
+  <!-- CATALOG -->
+  <section class="catalog-section">
+    <div class="container">
+
+      <!-- Filters -->
+      <div class="filter-bar" role="group" aria-label="Filter by category">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="sticker">Stickers</button>
+        <button class="filter-btn" data-filter="souvenir">Souvenirs</button>
+        <button class="filter-btn" data-filter="postcard">Postcards</button>
+        <button class="filter-btn" data-filter="custom">Custom</button>
+      </div>
+
+      <!-- Grid -->
+      <div class="catalog-grid">
+
+        <article class="catalog-card" data-category="sticker">
+          <div class="catalog-card__image card__image--1"></div>
+          <div class="catalog-card__body">
+            <div class="catalog-card__meta">
+              <span class="catalog-card__tag">Sticker</span>
+            </div>
+            <h3 class="catalog-card__title">Soleil de Midi</h3>
+            <p class="catalog-card__desc">Golden sun illustration, weatherproof vinyl. 8×8 cm die-cut.</p>
+          </div>
+        </article>
+
+        <article class="catalog-card" data-category="sticker">
+          <div class="catalog-card__image card__image--5"></div>
+          <div class="catalog-card__body">
+            <div class="catalog-card__meta">
+              <span class="catalog-card__tag">Sticker</span>
+            </div>
+            <h3 class="catalog-card__title">Flamenco Rose</h3>
+            <p class="catalog-card__desc">Bold floral design in rouge &amp; gold. Glossy vinyl, waterproof.</p>
+          </div>
+        </article>
+
+        <article class="catalog-card" data-category="sticker">
+          <div class="catalog-card__image card__image--8"></div>
+          <div class="catalog-card__body">
+            <div class="catalog-card__meta">
+              <span class="catalog-card__tag">Sticker</span>
+            </div>
+            <h3 class="catalog-card__title">Rosace</h3>
+            <p class="catalog-card__desc">Circular mandala-inspired design. Available as single or sheet of 4.</p>
+          </div>
+        </article>
+
+        <article class="catalog-card" data-category="souvenir">
+          <div class="catalog-card__image card__image--2"></div>
+          <div class="catalog-card__body">
+            <div class="catalog-card__meta">
+              <span class="catalog-card__tag">Souvenir</span>
+            </div>
+            <h3 class="catalog-card__title">Azulejo Dreams</h3>
+            <p class="catalog-card__desc">Portuguese tile-inspired design. Enamel pin, fridge magnet, or sticker set.</p>
+          </div>
+        </article>
+
+        <article class="catalog-card" data-category="souvenir">
+          <div class="catalog-card__image card__image--4"></div>
+          <div class="catalog-card__body">
+            <div class="catalog-card__meta">
+              <span class="catalog-card__tag">Souvenir</span>
+            </div>
+            <h3 class="catalog-card__title">Arc de Triomphe</h3>
+            <p class="catalog-card__desc">Sketched architectural illustration. Keychain or magnet finish.</p>
+          </div>
+        </article>
+
+        <article class="catalog-card" data-category="souvenir">
+          <div class="catalog-card__image card__image--9"></div>
+          <div class="catalog-card__body">
+            <div class="catalog-card__meta">
+              <span class="catalog-card__tag">Souvenir</span>
+            </div>
+            <h3 class="catalog-card__title">Terraço</h3>
+            <p class="catalog-card__desc">Checkered terracotta pattern. Coaster set of 4 or decorative tile print.</p>
+          </div>
+        </article>
+
+        <article class="catalog-card" data-category="postcard">
+          <div class="catalog-card__image card__image--3"></div>
+          <div class="catalog-card__body">
+            <div class="catalog-card__meta">
+              <span class="catalog-card__tag">Postcard</span>
+            </div>
+            <h3 class="catalog-card__title">Côte d'Azur</h3>
+            <p class="catalog-card__desc">Riviera landscape in warm sunset tones. Textured matte, 10×15 cm.</p>
+          </div>
+        </article>
+
+        <article class="catalog-card" data-category="postcard">
+          <div class="catalog-card__image card__image--6"></div>
+          <div class="catalog-card__body">
+            <div class="catalog-card__meta">
+              <span class="catalog-card__tag">Postcard</span>
+            </div>
+            <h3 class="catalog-card__title">Champs de Lavande</h3>
+            <p class="catalog-card__desc">Provençal lavender fields at dusk. Linen-textured paper stock.</p>
+          </div>
+        </article>
+
+        <article class="catalog-card" data-category="postcard">
+          <div class="catalog-card__image card__image--7"></div>
+          <div class="catalog-card__body">
+            <div class="catalog-card__meta">
+              <span class="catalog-card__tag">Postcard</span>
+            </div>
+            <h3 class="catalog-card__title">Mar Mediterráneo</h3>
+            <p class="catalog-card__desc">Minimalist sea horizon. Matte finish, set of 3.</p>
+          </div>
+        </article>
+
+        <article class="catalog-card" data-category="custom">
+          <div class="catalog-card__image" style="background: linear-gradient(135deg, var(--cream) 0%, #e8dcc5 100%); display:flex; align-items:center; justify-content:center;">
+            <span style="font-family: var(--font-display); font-size: 4rem; color: rgba(28,20,16,0.12);">?</span>
+          </div>
+          <div class="catalog-card__body">
+            <div class="catalog-card__meta">
+              <span class="catalog-card__tag">Custom</span>
+            </div>
+            <h3 class="catalog-card__title">Your Design</h3>
+            <p class="catalog-card__desc">Bring your own artwork or idea — we'll turn it into a beautiful sticker or souvenir.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section style="background: var(--terracotta); padding: 4rem 0; text-align: center; color: white;">
+    <div class="container">
+      <span class="section__label" style="color: var(--gold);">Ready to order?</span>
+      <h2 style="font-size: clamp(1.8rem, 3.5vw, 2.8rem); margin-bottom: 1rem; color: white;">Don't see exactly what you need?</h2>
+      <p style="color: rgba(255,255,255,0.8); margin-bottom: 2rem; max-width: 480px; margin-inline: auto; line-height: 1.7;">We do custom runs &mdash; your logo, your artwork, your idea. Get in touch and let's create something together.</p>
+      <a href="contact.html" class="btn btn--ghost">Get in Touch &rarr;</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">Pétale Studio</span>
+        <p>Art you can stick with.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="catalog.html">Catalog</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="footer__social">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="WhatsApp">WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2026 Pétale Studio. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

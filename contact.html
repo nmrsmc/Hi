@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Orders — Pétale Studio</title>
+  <meta name="description" content="Order stickers, souvenirs, or a custom design from Pétale Studio. Get in touch via the form, Instagram, or WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav__logo">Pétale<span>Studio</span></a>
+    <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="index.html" class="nav__link">Home</a></li>
+      <li><a href="catalog.html" class="nav__link">Catalog</a></li>
+      <li><a href="about.html" class="nav__link">About</a></li>
+      <li><a href="contact.html" class="nav__link active cta">Order Now</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <header class="page-hero page-hero--cobalt">
+    <span class="section__label">Orders &amp; Enquiries</span>
+    <h1 class="page-hero__title">Let's make<br>something together</h1>
+    <p>Fill out the form below, or reach us directly on Instagram or WhatsApp. We reply within 24 hours.</p>
+  </header>
+
+  <!-- CONTACT LAYOUT -->
+  <section class="contact-layout">
+    <div class="container contact-inner">
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h2>Get in touch</h2>
+        <p>We're a small studio — every order gets personal attention. Whether it's a single sticker or a custom batch of 500, we'd love to hear your idea.</p>
+
+        <div class="contact-links">
+          <div class="contact-link">
+            <div class="contact-link__icon contact-link__icon--ig">&#127774;</div>
+            <div class="contact-link__text">
+              <strong>Instagram</strong>
+              <a href="#">@petalestudio</a>
+            </div>
+          </div>
+          <div class="contact-link">
+            <div class="contact-link__icon contact-link__icon--wa">&#128241;</div>
+            <div class="contact-link__text">
+              <strong>WhatsApp</strong>
+              <a href="#">+00 000 000 0000</a>
+            </div>
+          </div>
+          <div class="contact-link">
+            <div class="contact-link__icon contact-link__icon--em">&#9993;</div>
+            <div class="contact-link__text">
+              <strong>Email</strong>
+              <a href="mailto:hello@petalestudio.com">hello@petalestudio.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: rgba(200,91,53,0.07); border-left: 3px solid var(--terracotta); padding: 1.25rem 1.5rem; border-radius: 0 4px 4px 0;">
+          <p style="font-size: 0.88rem; color: var(--charcoal); line-height: 1.65; margin: 0;">
+            <strong style="display: block; margin-bottom: 0.3rem; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--terracotta);">Turnaround</strong>
+            Catalog designs ship in 3–5 days. Custom orders typically take 7–14 days depending on quantity and complexity.
+          </p>
+        </div>
+
+        <div style="margin-top: 1.5rem; background: rgba(27,59,138,0.06); border-left: 3px solid var(--cobalt); padding: 1.25rem 1.5rem; border-radius: 0 4px 4px 0;">
+          <p style="font-size: 0.88rem; color: var(--charcoal); line-height: 1.65; margin: 0;">
+            <strong style="display: block; margin-bottom: 0.3rem; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--cobalt);">Custom orders</strong>
+            Minimum quantities apply for custom runs. Share your design or idea and we'll send a quote within 48 hours.
+          </p>
+        </div>
+      </div>
+
+      <!-- Order Form -->
+      <div class="contact-form" id="contactFormWrapper">
+        <h3>Send an enquiry</h3>
+        <p>Tell us what you're after and we'll get back to you with options and pricing.</p>
+
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First name</label>
+              <input type="text" id="firstName" name="firstName" placeholder="Ana" required>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last name</label>
+              <input type="text" id="lastName" name="lastName" placeholder="García" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="ana@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="orderType">What are you looking for?</label>
+            <select id="orderType" name="orderType" required>
+              <option value="" disabled selected>Select a type&hellip;</option>
+              <option value="sticker">Stickers (catalog design)</option>
+              <option value="souvenir">Souvenirs (catalog design)</option>
+              <option value="postcard">Postcards (catalog design)</option>
+              <option value="custom-sticker">Custom sticker design</option>
+              <option value="custom-souvenir">Custom souvenir / merch</option>
+              <option value="bulk">Bulk / wholesale order</option>
+              <option value="other">Other / not sure yet</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="quantity">Approx. quantity</label>
+            <select id="quantity" name="quantity">
+              <option value="" disabled selected>How many?</option>
+              <option value="1-10">1–10 pieces</option>
+              <option value="10-50">10–50 pieces</option>
+              <option value="50-200">50–200 pieces</option>
+              <option value="200+">200+ pieces</option>
+              <option value="unsure">Not sure yet</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your idea or message</label>
+            <textarea id="message" name="message" placeholder="Tell us about your design idea, the occasion, any reference images or specific requirements&hellip;" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary form-submit">
+            Send Enquiry &rarr;
+          </button>
+          <p class="form-note">We'll reply to your email within 24 hours.</p>
+        </form>
+
+        <div class="form-success" id="formSuccess">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">&#10003;</div>
+          <h4>Message sent!</h4>
+          <p>Thanks for reaching out. We'll get back to you within 24 hours with more details and pricing.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="background: var(--cream); border-top: 1px solid rgba(28,20,16,0.08); padding-block: clamp(3rem, 6vw, 5rem);">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__label">Common questions</span>
+        <h2 class="section__title">FAQ</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; margin-top: 1rem;">
+
+        <div>
+          <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Do you ship internationally?</h3>
+          <p style="font-size: 0.9rem; color: rgba(28,20,16,0.6); line-height: 1.65;">Yes! We ship worldwide. Shipping times and costs vary by destination — we'll include details in your quote.</p>
+        </div>
+
+        <div>
+          <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Can I use my own artwork?</h3>
+          <p style="font-size: 0.9rem; color: rgba(28,20,16,0.6); line-height: 1.65;">Absolutely. Send us your file (vector preferred, 300 dpi minimum) and we'll handle the rest. We can also help with design if needed.</p>
+        </div>
+
+        <div>
+          <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">What's the minimum order?</h3>
+          <p style="font-size: 0.9rem; color: rgba(28,20,16,0.6); line-height: 1.65;">Catalog designs have no minimum — order just one. Custom designs typically have a minimum of 25–50 units depending on the product.</p>
+        </div>
+
+        <div>
+          <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Are the stickers waterproof?</h3>
+          <p style="font-size: 0.9rem; color: rgba(28,20,16,0.6); line-height: 1.65;">Yes. We use premium weatherproof vinyl with UV-resistant laminate. They'll survive bottles, laptops, and outdoor use.</p>
+        </div>
+
+        <div>
+          <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Can I get a sample before ordering in bulk?</h3>
+          <p style="font-size: 0.9rem; color: rgba(28,20,16,0.6); line-height: 1.65;">Yes — sample packs are available for bulk orders. Ask about it in your enquiry and we'll include it in the quote.</p>
+        </div>
+
+        <div>
+          <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">How do I pay?</h3>
+          <p style="font-size: 0.9rem; color: rgba(28,20,16,0.6); line-height: 1.65;">We accept bank transfer, PayPal, and most major cards. Payment details are included in the invoice after your order is confirmed.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">Pétale Studio</span>
+        <p>Art you can stick with.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="catalog.html">Catalog</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="footer__social">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="WhatsApp">WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2026 Pétale Studio. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
