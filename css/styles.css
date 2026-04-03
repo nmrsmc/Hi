@@ -1,14 +1,14 @@
 /* =========================================
-   PÉTALE STUDIO — Main Stylesheet
+   COSETTE — Main Stylesheet
    ========================================= */
 
 /* --- Variables --- */
 :root {
   --cream:       #F8F2E1;
-  --terracotta:  #C85B35;
+  --terracotta:  #F0116E;  /* hot pink */
   --cobalt:      #1B3B8A;
   --gold:        #E8B93E;
-  --rouge:       #B82327;
+  --rouge:       #D41420;  /* vivid red */
   --sage:        #5A6B2F;
   --charcoal:    #1C1410;
   --white:       #FFFFFF;
@@ -99,7 +99,7 @@ h1, h2, h3, h4 {
   background: var(--rouge);
   border-color: var(--rouge);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(200, 91, 53, 0.35);
+  box-shadow: 0 8px 24px rgba(240, 17, 110, 0.38);
 }
 
 .btn--ghost {
@@ -234,7 +234,7 @@ h1, h2, h3, h4 {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: var(--terracotta);
+  background: var(--cobalt);
   overflow: hidden;
   padding-top: var(--nav-h);
 }
@@ -243,8 +243,8 @@ h1, h2, h3, h4 {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 60% 70% at 75% 50%, rgba(232, 185, 62, 0.25) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 50% at 10% 80%, rgba(27, 59, 138, 0.3) 0%, transparent 55%);
+    radial-gradient(ellipse 60% 70% at 75% 50%, rgba(240, 17, 110, 0.28) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 50% at 10% 80%, rgba(212, 20, 32, 0.22) 0%, transparent 55%);
 }
 
 /* Decorative tile grid texture */
@@ -318,14 +318,14 @@ h1, h2, h3, h4 {
   width: 500px; height: 500px;
   right: -100px; top: 50%;
   transform: translateY(-50%);
-  background: radial-gradient(circle at 35% 40%, rgba(232, 185, 62, 0.18) 0%, transparent 65%);
+  background: radial-gradient(circle at 35% 40%, rgba(240, 17, 110, 0.22) 0%, transparent 65%);
 }
 .hero__deco-circle--2 {
   width: 320px; height: 320px;
   right: 80px; top: 50%;
   transform: translateY(-60%);
-  border-color: rgba(232, 185, 62, 0.2);
-  background: radial-gradient(circle at 60% 60%, rgba(27, 59, 138, 0.2) 0%, transparent 65%);
+  border-color: rgba(232, 185, 62, 0.3);
+  background: radial-gradient(circle at 60% 60%, rgba(212, 20, 32, 0.18) 0%, transparent 65%);
 }
 
 /* Floating art shapes in hero */
@@ -333,7 +333,7 @@ h1, h2, h3, h4 {
   content: '✦';
   position: absolute;
   font-size: 8rem;
-  color: rgba(232, 185, 62, 0.12);
+  color: rgba(240, 17, 110, 0.18);
   right: 15%;
   top: 20%;
   animation: floatStar 6s ease-in-out infinite;
@@ -342,7 +342,7 @@ h1, h2, h3, h4 {
   content: '◆';
   position: absolute;
   font-size: 3rem;
-  color: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.1);
   right: 35%;
   bottom: 25%;
   animation: floatStar 8s ease-in-out infinite reverse;
@@ -357,7 +357,7 @@ h1, h2, h3, h4 {
    MARQUEE
    ========================================= */
 .marquee {
-  background: var(--cobalt);
+  background: var(--terracotta);
   overflow: hidden;
   padding: 0.85rem 0;
   white-space: nowrap;
@@ -379,7 +379,7 @@ h1, h2, h3, h4 {
 }
 
 .marquee__track span[aria-hidden="true"] {
-  color: var(--gold);
+  color: rgba(255,255,255,0.9);
   font-size: 0.6rem;
 }
 
@@ -426,56 +426,67 @@ h1, h2, h3, h4 {
   overflow: hidden;
 }
 
-/* CSS Art Placeholders */
+/* CSS Art Placeholders — Oakland Wildlife */
+/* card--1: White Raccoon (pale night scene) */
 .card__image--1 {
   background:
-    radial-gradient(circle 80px at 50% 45%, rgba(255,255,255,0.9) 0%, transparent 70%),
-    radial-gradient(circle 120px at 50% 45%, rgba(232, 185, 62, 0.6) 0%, transparent 65%),
-    radial-gradient(circle at 50% 45%, #E8B93E 0%, #C85B35 60%, #1B3B8A 100%);
+    radial-gradient(circle 55px at 50% 42%, rgba(255,255,255,0.95) 0%, rgba(220,220,230,0.8) 40%, transparent 70%),
+    radial-gradient(circle 20px at 42% 38%, rgba(0,0,0,0.4) 0%, transparent 60%),
+    radial-gradient(circle 20px at 58% 38%, rgba(0,0,0,0.4) 0%, transparent 60%),
+    radial-gradient(circle at 50% 45%, #1B3B8A 0%, #0d2260 60%, #080d1a 100%);
 }
+/* card--2: Night Heron (dark silhouette on dusk water) */
 .card__image--2 {
   background:
-    repeating-linear-gradient(0deg, rgba(255,255,255,0.15) 0, rgba(255,255,255,0.15) 1px, transparent 1px, transparent 44px),
-    repeating-linear-gradient(90deg, rgba(255,255,255,0.15) 0, rgba(255,255,255,0.15) 1px, transparent 1px, transparent 44px),
-    linear-gradient(135deg, #1B3B8A 0%, #2a52b8 50%, #1B3B8A 100%);
+    radial-gradient(ellipse 30px 90px at 50% 55%, #1a1a1a 0%, #333 30%, transparent 65%),
+    radial-gradient(ellipse 15px 15px at 50% 28%, #111 0%, transparent 80%),
+    linear-gradient(180deg, #F0116E 0%, #D41420 25%, #7a0a2e 50%, #2a1060 70%, #1B3B8A 100%);
 }
+/* card--3: Lake Merritt postcard (water + skyline) */
 .card__image--3 {
   background:
-    linear-gradient(180deg, #87CEEB 0%, #B8E2F2 40%, #E8B93E 55%, #C85B35 75%, #8B7355 100%);
+    linear-gradient(180deg, #1B3B8A 0%, #2a5298 35%, #4a9eda 55%, rgba(74,158,218,0.7) 60%, #3a7a9a 65%, #1B3B8A 100%);
 }
+/* card--4: Great Blue Heron (blue-grey silhouette) */
 .card__image--4 {
   background:
-    radial-gradient(ellipse 60% 40% at 50% 65%, #C85B35 0%, transparent 60%),
-    linear-gradient(180deg, #F9F3E4 0%, #E8D5B0 50%, #8B5E3C 100%);
+    radial-gradient(ellipse 18px 60px at 50% 55%, #4a6080 0%, #3a5070 30%, transparent 65%),
+    radial-gradient(ellipse 12px 12px at 50% 30%, #3a5070 0%, transparent 80%),
+    linear-gradient(180deg, #87CEEB 0%, #b0d8ea 40%, #d4eaf5 60%, #e8f4fa 100%);
 }
+/* card--5: Pelican (white bird on pink/sunset) */
 .card__image--5 {
   background:
-    radial-gradient(circle 30px at 30% 50%, rgba(255,255,255,0.8) 0%, transparent 70%),
-    radial-gradient(circle 30px at 70% 50%, rgba(255,255,255,0.8) 0%, transparent 70%),
-    linear-gradient(160deg, #B82327 0%, #E8B93E 50%, #1B3B8A 100%);
+    radial-gradient(ellipse 50px 40px at 50% 45%, rgba(255,255,255,0.95) 0%, rgba(240,240,255,0.6) 60%, transparent 80%),
+    linear-gradient(160deg, #F0116E 0%, #E8B93E 45%, #D41420 100%);
 }
+/* card--6: Snowy Egret (white on green marsh) */
 .card__image--6 {
   background:
-    repeating-linear-gradient(90deg, rgba(106, 90, 205, 0.4) 0, rgba(106, 90, 205, 0.4) 8px, transparent 8px, transparent 20px),
-    linear-gradient(180deg, #87CEEB 0%, #B8E2F2 30%, #9B7EC8 50%, #5A6B2F 80%, #4a5a25 100%);
+    radial-gradient(ellipse 25px 70px at 50% 50%, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.6) 40%, transparent 70%),
+    linear-gradient(180deg, #87CEEB 0%, #a8d8b0 35%, #5A6B2F 65%, #3d4f22 100%);
 }
+/* card--7: American Coot (dark bird, blue water) */
 .card__image--7 {
   background:
-    linear-gradient(180deg, #1B3B8A 0%, #2a5298 30%, #4a9eda 60%, #87CEEB 80%, #F8F2E1 100%);
+    radial-gradient(circle 30px at 50% 50%, #1a1a2a 0%, #2a2a3a 40%, transparent 70%),
+    radial-gradient(circle 10px at 50% 38%, rgba(255,255,255,0.9) 0%, transparent 80%),
+    linear-gradient(180deg, #1B3B8A 0%, #2a5298 40%, #4a9eda 70%, #87CEEB 100%);
 }
+/* card--8: Cormorant (dark bird, wings spread) */
 .card__image--8 {
   background:
-    radial-gradient(circle 60px at 50% 50%, rgba(255,255,255,0.95) 0%, transparent 65%),
-    conic-gradient(from 0deg at 50% 50%, #E8B93E, #C85B35, #B82327, #1B3B8A, #5A6B2F, #E8B93E);
+    radial-gradient(ellipse 60px 40px at 50% 45%, #111 0%, #222 40%, transparent 70%),
+    radial-gradient(ellipse 90px 25px at 35% 50%, #1a1a1a 0%, transparent 70%),
+    radial-gradient(ellipse 90px 25px at 65% 50%, #1a1a1a 0%, transparent 70%),
+    linear-gradient(180deg, #F0116E 0%, #D41420 30%, #7a1a20 55%, #1B3B8A 100%);
 }
+/* card--9: Grebe (checkered/spotted pattern) */
 .card__image--9 {
   background:
-    linear-gradient(45deg, #F8F2E1 25%, transparent 25%),
-    linear-gradient(-45deg, #F8F2E1 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, #F8F2E1 75%),
-    linear-gradient(-45deg, transparent 75%, #F8F2E1 75%);
-  background-size: 20px 20px;
-  background-color: var(--terracotta);
+    radial-gradient(circle 25px at 50% 42%, rgba(255,255,255,0.85) 0%, transparent 70%),
+    radial-gradient(circle 35px at 50% 55%, #3a2a18 0%, transparent 70%),
+    linear-gradient(180deg, #1B3B8A 0%, #1e3f80 40%, #87CEEB 65%, #b0d8ea 100%);
 }
 
 .card__image::after {
@@ -498,7 +509,7 @@ h1, h2, h3, h4 {
   display: inline-block;
   margin-bottom: 0.5rem;
   padding: 0.2rem 0.6rem;
-  background: rgba(200, 91, 53, 0.1);
+  background: rgba(240, 17, 110, 0.1);
   border-radius: 2px;
 }
 
@@ -561,10 +572,10 @@ h1, h2, h3, h4 {
   inset: 0;
   border-radius: 8px;
   background:
-    radial-gradient(circle 100px at 35% 35%, rgba(232, 185, 62, 0.7) 0%, transparent 65%),
-    radial-gradient(circle 80px at 70% 65%, rgba(200, 91, 53, 0.6) 0%, transparent 65%),
+    radial-gradient(circle 100px at 35% 35%, rgba(240, 17, 110, 0.55) 0%, transparent 65%),
+    radial-gradient(circle 80px at 70% 65%, rgba(212, 20, 32, 0.5) 0%, transparent 65%),
     radial-gradient(circle 60px at 20% 70%, rgba(27, 59, 138, 0.7) 0%, transparent 65%),
-    linear-gradient(135deg, #2a1f1a 0%, #3d2b22 50%, #1a2540 100%);
+    linear-gradient(135deg, #12103a 0%, #1a1040 50%, #0d1a3a 100%);
   overflow: hidden;
 }
 
@@ -673,6 +684,22 @@ h1, h2, h3, h4 {
 .page-hero--cobalt .page-hero__title { color: var(--white); }
 .page-hero--cobalt p { color: rgba(255,255,255,0.72); }
 
+.page-hero--rouge {
+  background: var(--rouge);
+  color: var(--white);
+}
+.page-hero--rouge .section__label { color: var(--gold); }
+.page-hero--rouge .page-hero__title { color: var(--white); }
+.page-hero--rouge p { color: rgba(255,255,255,0.72); }
+
+.page-hero--pink {
+  background: var(--terracotta);
+  color: var(--white);
+}
+.page-hero--pink .section__label { color: rgba(255,255,255,0.75); }
+.page-hero--pink .page-hero__title { color: var(--white); }
+.page-hero--pink p { color: rgba(255,255,255,0.78); }
+
 .page-hero--cream {
   background: var(--cream);
   border-bottom: 1px solid var(--border);
@@ -775,7 +802,7 @@ h1, h2, h3, h4 {
   text-transform: uppercase;
   color: var(--terracotta);
   padding: 0.2rem 0.55rem;
-  background: rgba(200, 91, 53, 0.1);
+  background: rgba(240, 17, 110, 0.1);
   border-radius: 2px;
 }
 
@@ -832,7 +859,7 @@ h1, h2, h3, h4 {
   background:
     radial-gradient(circle 120px at 40% 35%, rgba(232, 185, 62, 0.5) 0%, transparent 65%),
     radial-gradient(circle 80px at 75% 70%, rgba(200, 91, 53, 0.4) 0%, transparent 65%),
-    linear-gradient(135deg, #C85B35 0%, #E8B93E 40%, #1B3B8A 100%);
+    linear-gradient(135deg, #F0116E 0%, #E8B93E 40%, #1B3B8A 100%);
 }
 .about-art__accent {
   position: absolute;
@@ -1069,7 +1096,7 @@ h1, h2, h3, h4 {
 .form-group select:focus,
 .form-group textarea:focus {
   border-color: var(--terracotta);
-  box-shadow: 0 0 0 3px rgba(200, 91, 53, 0.12);
+  box-shadow: 0 0 0 3px rgba(240, 17, 110, 0.12);
 }
 
 .form-group textarea {
